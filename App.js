@@ -16,16 +16,35 @@ const theme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    primary: '#001524',
-    secondary: '#FF9633',
-    background: '#FFECD1',
+    primary: '#4C352F',
+    secondary: '#ffe083', // pallete 2
+    background: '#F9F7F0',
   },
 };
+
+// primary: '#1f271b',
+// secondary: '#ffd23f', //00A9A5 // pallete 1
+// background: '#f3fcf0',
+
+// primary: '#03045e',
+// secondary: '#00b4d8',  // pallete 2
+// background: '#caf0f8',
+
+// primary: '#184e77',
+//     secondary: '#76c893',  // pallete 3
+//     background: '#d9ed92',
+
+// primary: '#0F293A',
+//     secondary: '#62B6CB',  // pallete 3
+//     background: '#CAE9FF',
 
 const App = () => {
   return (
     <PaperProvider theme={theme}>
-      <StatusBar backgroundColor="#FFF8F0" barStyle="dark-content" />
+      <StatusBar
+        backgroundColor={theme.colors.primary}
+        barStyle="light-content"
+      />
       <Main />
     </PaperProvider>
   );
